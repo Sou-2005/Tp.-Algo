@@ -1,0 +1,71 @@
+:1التمرين 
+#include <stdio.h >
+int main () {
+char  matrix [5][5]; 
+int i, j; 
+matrix[5][5]= {'1','2','3','4','5'}; 
+              {'7','a','c','8','d'};
+              {'c','9','4','z','8'};
+              {'5','6','p','n','3'}; 
+              {'2','9','t','m','k'}; 
+for(int i=0;i<5;i++)
+   {
+      for(int j =0;j<5;j++)
+         {
+        printf ("/n");
+         }  
+   }
+for(i=0;i<5;i++)
+    {
+        for(j=0;j<5;j++)
+            if(i%2=0)
+        {
+              printf ("%c /t"; matrix [i][j]);
+              printf ("/n");
+        }
+   }
+for(i=0;i<5;i++)
+{
+     for(j=0;j<5;j++)
+     if (i%2!=0)
+    {
+         printf ("%c "; matrix [i][j]);
+         printf ("/n");
+    }
+}
+for(i=0;i<5;i++)
+{
+     for(j=0;j<5;j++) 
+       if(i=j)
+    {
+        printf ("%c"; matrix [i][j]);
+        printf ("/n");
+    }
+} 
+for(i=0;i<5;i++)
+{
+     for(j=0;j<5;j++)
+     if(i+j=4)
+     {
+           printf ("%c /t"; matrix [i][j]);
+           printf ("/n");
+     }
+ return 0;
+}
+                                         التمرين الثاني: 
+  #include <stdio.h >
+  int main () { 
+  int m[10] [10]
+  int i ,j , x;
+     for(i=0;i<10;i++)
+          for(j=0;j<10;j++)
+              if(i==j)
+                printf('m[i][j]=\n'); 
+          for(j=0;j<10;j++)
+             for (i=0;i<10;i++)
+            {  
+               m[i][j]=m[j][i]; 
+             printf("%c",matrix[i][j]);
+             printf("\n");
+             return 0;
+               }
