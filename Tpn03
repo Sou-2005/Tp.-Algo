@@ -69,21 +69,22 @@ element *ajouterEnDebut(element *L, int val) {
     nouveau->val = val;                  // تعيين القيمة
     nouveau->suivant = L; 
                      // ربط العنصر الجديد برأس القائمةال الحالي
-    return nouveau;       // إرجاع العنصر الجديد كرأس القائمة
+    return nouveau;     
+                          // إرجاع العنصر الجديد كرأس القائمة
 }
 
-// دالة لتفريغ القائمة وحذف كل عناصرها
-void viderListe(element *L) {
+                       // دالة لتفريغ القائمة وحذف كل عناصرها void viderListe(element *L) {
     element *courant = L;         // بداية من رأس القائمة
     while (courant != NULL) {
         element *temp = courant; 
                                // تخزين العنصر الحالي مؤقتًا
         courant = courant->suivant; 
                                 // الانتقال إلى العنصر التالي 
-        free(temp);                 // تحرير العنصر الحالي
+        free(temp);               
+                                // تحرير العنصر الحالي
                              }
     printf("La liste est vide.\n");
-                         // طباعة رسالة تفيد بأن القائمة فارغة
+                       // طباعة رسالة تفيد بأن القائمة فارغة
                              }
 
 int main() {
@@ -98,19 +99,23 @@ int main() {
    
  afficherListe(liste);           // عرض القائمة الأولية
 
-    liste = supprimerEnFin(liste);  // حذف العنصر الأخير
+    liste = supprimerEnFin(liste); 
+                                  // حذف العنصر الأخير
   
   printf("Liste après suppression en fin: ");
 
-    afficherListe(liste);        // عرض القائمة بعد الحذف
+    afficherListe(liste);     
+                                 // عرض القائمة بعد الحذف
 
     liste = ajouterEnDebut(liste, 40); 
                          // إضافة عنصر جديد في بداية القائمة  
   printf("Liste après ajout en début: ");
   
-  afficherListe(liste);       // عرض القائمة بعد الإضافة
+  afficherListe(liste);     
+                                // عرض القائمة بعد الإضافة
     
-viderListe(liste);    // تفريغ القائمة وحذف جميع العناصر
+viderListe(liste);    
+                          // تفريغ القائمة وحذف جميع العناصر
 
     return 0;
 }
