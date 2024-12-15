@@ -43,7 +43,7 @@ void afficherListe(element *L) {
                                       }
     courant = courant->suivant;  // الانتقال إلى العنصرالتالي 
                             }
-    printf("->NULL\n");             // طباعة نهاية القائمة
+    printf("->NULL\n");             
                                 }
 
                          // دالة لحذف العنصر الأخير في القائمة
@@ -56,10 +56,11 @@ element *supprimerEnFin(element *L) {
         return NULL;                // تصبح القائمة فارغة
                               }
          element *courant = L;
-   while (courant->suivant->suivant != NULL) {
- courant = courant->suivant; // البحث عن العنصر قبل الاخير
-                                            }
-  free(courant->suivant);           // حذف العنصر الأخير courant->suivant = NULL; // إنهاء القائمة عند العنصر قبل الاخير 
+   while (courant->suivant->suivant != NULL) 
+          {
+ courant = courant->suivant; 
+                        }
+  free(courant->suivant);           // حذف العنصر الأخير courant->suivant = NULL;  
     return L;                        // إرجاع رأس القائمة
 }
 
@@ -74,14 +75,15 @@ element *ajouterEnDebut(element *L, int val) {
 }
 
                        // دالة لتفريغ القائمة وحذف كل عناصرها void viderListe(element *L) {
-    element *courant = L;         // بداية من رأس القائمة
+    element *courant = L;       
+                                  // بداية من رأس القائمة
     while (courant != NULL) {
         element *temp = courant; 
                                // تخزين العنصر الحالي مؤقتًا
         courant = courant->suivant; 
-                                // الانتقال إلى العنصر التالي 
+                                 
         free(temp);               
-                                // تحرير العنصر الحالي
+                                 
                              }
     printf("La liste est vide.\n");
                        // طباعة رسالة تفيد بأن القائمة فارغة
@@ -92,8 +94,7 @@ int main() {
     int Tab[10] = {1, 3, 5, 7, 8, 10, 9, 11, 13,        20};
     element *liste = creerListe();   // إنشاء قائمة فارغة
   
-  liste = chargerListe(Tab, 10);
-                        // ملأ العناصر من المصفوفة إلى القائمة
+  liste = chargerListe(Tab, 10); 
 
     printf("Liste initiale: ");
    
